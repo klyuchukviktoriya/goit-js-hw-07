@@ -10,11 +10,13 @@ const input = controls.children[0];
 const createButton = controls.children[1];
 const destroyButton = controls.children[2];
 
-createButton.addEventListener("click", () => {
-  const amount = input.value;
+const createBoxes = amount => {
+  amount = input.value;
   boxes.innerHTML = "";
   input.value = "";
+
   if (amount >= 1 && amount <= 100) {
+
     const boxesArray = [];
 
     for (let i = 0; i < amount; i += 1) {
@@ -22,14 +24,16 @@ createButton.addEventListener("click", () => {
       box.style.width = `${30 + i * 10}px`;
       box.style.height = `${30 + i * 10}px`;
       box.style.backgroundColor = getRandomHexColor();
-
       boxesArray.push(box);
     }
+
     boxes.append(...boxesArray);
   }
-});
+}
 
-destroyButton.addEventListener("click", () => {
+const destroyBoxes = () => {
   boxes.innerHTML = "";
-  input.value = "";
-});
+}
+
+createButton.addEventListener("click", (createBoxes));
+destroyButton.addEventListener("click", (destroyBoxes));
