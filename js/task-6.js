@@ -22,10 +22,10 @@ createButton.addEventListener("click", () => {
       box.style.width = `${30 + i * 10}px`;
       box.style.height = `${30 + i * 10}px`;
       box.style.backgroundColor = getRandomHexColor();
-      boxes.appendChild(box);
+
       boxesArray.push(box);
     }
-    console.log(boxesArray);
+    boxes.append(...boxesArray);
   }
 });
 
