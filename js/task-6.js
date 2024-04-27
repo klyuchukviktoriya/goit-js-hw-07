@@ -35,5 +35,12 @@ const destroyBoxes = () => {
   boxes.innerHTML = "";
 }
 
-createButton.addEventListener("click", (createBoxes));
-destroyButton.addEventListener("click", (destroyBoxes));
+const onCreateButtonClick = () => {
+  createBoxes();
+}
+const onDestroyButtonClick = () => {
+  destroyBoxes();
+}
+
+createButton.addEventListener("click", onCreateButtonClick);
+destroyButton.addEventListener("click", onCreateButtonClick);
