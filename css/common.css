@@ -333,3 +333,8 @@ body {
   min-height: 104px;
   margin: 0 auto;
 }
+
+#boxes > div {
+  border-radius: 80%;
+  border: 1px solid #808080;
+}
